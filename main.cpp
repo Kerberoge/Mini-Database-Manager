@@ -165,7 +165,9 @@ int main() {
 
                 std::string conv_cur_cn_cl = std::to_string(column_numbers.at(ia));
                 int cur_cn_cl = conv_cur_cn_cl.size();
-                int max_cn_cl = *std::max_element(char_lengths.at(ia).begin(), char_lengths.at(ia).end());
+                std::string conv_max_cn_cl = std::to_string(*row_numbers.end());
+                int max_cn_cl = conv_max_cn_cl.size();
+
                 add_spaces(cur_cn_cl, max_cn_cl, 2);
 
             }
@@ -179,7 +181,9 @@ int main() {
 
                 std::string conv_cur_rn_cl = std::to_string(row_numbers.at(ib));
                 int cur_rn_cl = conv_cur_rn_cl.size();
-                int max_rn_cl = *std::max_element(row_numbers.begin(), row_numbers.end());
+                std::string conv_max_rn_cl = std::to_string(*row_numbers.end());
+                int max_rn_cl = conv_max_rn_cl.size();
+                
                 add_spaces(cur_rn_cl, max_rn_cl, 3);
 
                 //output row items
