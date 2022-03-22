@@ -1,5 +1,5 @@
 //a = column, b = database.size()
-int column_checker (int a, int b) {
+bool column_checker (int a, int b) {
 
     if (a <= b && a > 0) {
         return true;
@@ -10,7 +10,7 @@ int column_checker (int a, int b) {
 }
 
 //a = row, b = database.at(0).size()
-int row_checker (int a, int b) {
+bool row_checker (int a, int b) {
 
     if (a <= b && a > 0) {
         return true;
@@ -18,6 +18,16 @@ int row_checker (int a, int b) {
         return false;
     }
 
+}
+
+bool database_empty (std::vector<std::vector<std::string>> *db_p) {
+    
+    if (db_p->size() == 0) {
+        return true;
+    } else {
+        return false;
+    }
+    
 }
 
 void update_char_lengths (std::vector<std::vector<std::string>> *db_p, std::vector<std::vector<int>> *cl_p) {
@@ -53,4 +63,13 @@ void add_spaces (int cur_cl, int max_cl, int am_s) {
 
     }
 
+}
+
+//defines longest char length from a string vector
+int max_char_length (std::vector<std::string> *v_p) {
+    
+    std::string max_element = *std::max_element(v_p->begin(), v_p->end());
+    
+    return max_element.size();
+    
 }
